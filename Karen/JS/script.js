@@ -53,7 +53,7 @@ if(confirm("This game contains music and sounds. Press cancel to mute.")){
     bossShotSound='/profile/Karen/assets/sounds/bossHit.mp3'
     bossScreech='/profile/Karen/assets/sounds/screech.mp3'
     barker='/profile/Karen/assets/sounds/bobBarker.mp3'
-    priceFail='assets/sounds/priceRightFail.mp3'
+    priceFail='/profile/Karen/assets/sounds/priceRightFail.mp3'
 }
 
 
@@ -223,7 +223,7 @@ function transitionBg(){
     tl.to('.square',{opacity: 1, duration: 5})
       .to('h3',{opacity: 1, duration: 6},"-=2.2")
       .to('p',{opacity: 1, duration: 1},"-=2.2")
-      .to(".container",{backgroundImage:'url(assets/FinalBossHell.jpg)'})
+      .to(".container",{backgroundImage:'url(/profile/Karen/assets/FinalBossHell.jpg)'})
       .to('h3',{opacity: 0, duration: 5})
       .to('p',{opacity: 0, duration: .5},"-=3")
       .to('audio',{duration:5,volume:0},"-=5.5")
@@ -246,7 +246,7 @@ function bossDeath(){
     tl.to('h2',{display:'none'})  
       .to('.karenBoss',4,{backgroundSize:0})
       .to('audio',{duration:3,volume:0},"-=2.5")  
-      .to('.square',2,{opacity:1, backgroundImage:'url(assets/victoryPark.png)'})
+      .to('.square',2,{opacity:1, backgroundImage:'url(/profile/Karen/assets/victoryPark.png)'})
       .add(vol(victoryMus),"+=3")
       .to('#arnold',5,{opacity:1})
       .to('.victoryMessage',{opacity:1},"-=3");
