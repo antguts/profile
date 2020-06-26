@@ -1,0 +1,100 @@
+@charset "utf-8";
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 2
+   
+   Style Sheet for Costume Expressions Front Page
+   Author: Anthony Gutilla
+
+   
+   Filename: ce_styles.css
+*/
+
+
+/* Window and Body Styles */
+
+html { 
+  background-color: rgb(101, 101, 101);
+}
+
+
+body {
+  position: relative;
+  background-color: white;
+  font-style: Verdana, Geneva, Arial, sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  min-width: 320px;
+  max-width: 960px;
+}
+
+img {
+  display: block;
+  width: 100%
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+
+/* Body Header Styles */
+
+header {
+  background-color: rgb(191,68,70);
+  height: 40px;
+}
+
+ul li {
+  display: block;
+  float: left;
+  margin-right: 20px;
+  padding: 10px 0px;
+}
+
+li > a:visited, li > a:link {
+  font-size: 0.9em;
+  color: rgb(51,51,51);
+}
+li > a:hover, li > a:active {
+  color: rgb(211,211,211);
+}
+
+
+/* DIV Container Styles */
+
+#container {
+  padding-right: 8px;
+  padding-bottom: 8px;
+}
+
+.cell a {
+  display: block;
+  width: 100%;
+  padding-left: 8px;
+  padding-top: 8px;
+}
+
+
+
+
+/* Footer Styles */
+
+footer {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  color: rgb(143,33,36);
+  text-align: right;
+  font-size: 2vmin;
+}
+
+
+

@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 1
+   
+  Layout styles for Slate and Pencil Tutoring
+  Author:  Anthony Gutilla
+  Date:   11/15/18
+
+
+   Filename: sp_layout.css
+
+*/
+
+
+
+/* Window and Body Styles */
+
+html {
+  height: 100%;
+}
+
+body {
+  min-width: 640px;
+  max-width: 960px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100%;
+}
+
+header, ul, nav, li, a {
+  box-sizing: border-box;
+}
+
+
+/* Row Styles */
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+/* Page Header Styles */
+
+header img {
+  display: block;
+  width: 70%;
+  float: left;
+}
+
+header nav {
+  float: left;
+  padding-right: 2%;
+  padding-left: 2%;
+  width: 30%;
+}
+
+nav a{
+  display: block;
+  width: 100%;
+}
+
+
+
+/* Horizontal Navigation List Styles */
+
+.horizontal li{
+  display: block;
+  width: 12.5%;
+  float: left;
+}
+
+
+
+/* Topics Styles */
+
+#topics li:first-child {
+  margin-left: 7.75%; 
+}
+
+#topics li:last-child {
+  margin-right: 7.75%;
+}
+
+
+#topics  li{
+  display: block;
+  width: 20%;
+  float: left;
+  margin-left: 0%;
+  margin-right: 1.5%;
+}
+
+#topics  li > img {
+  display: block;
+  width: 50%;
+  margin-left:  auto;
+  margin-right: auto; 
+}
+
+
+/* HR Styles */
+
+hr {
+  width: 50%;
+}
+
+
+
+/* Customer Comment Styles */
+
+ul#comments {
+  width: 75%;
+  margin: 40px auto;
+}
+
+#comments li { 
+  display: block;
+  width: 50%;
+  float: left;
+  margin-bottom: 30px;
+}
+
+#comments li >img {
+  display: block;
+  width: 20%;
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#comments li > p {
+  float: left;
+  width: 70%;
+}
+
+
+/* Footer Styles */
+
+footer {
+  content: "";
+  clear: both;
+}
+
+
+
+
+

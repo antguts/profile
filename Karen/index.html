@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sytles.css">
+    <title>Zombie Karens!</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="square"></div>
+        <h2>LIFE: <span id="lifeCnt">0</span></h2>
+        <div class="victoryMessage"></div>
+    </div>
+    <div class= "gameInfo">
+        <h1>Zombie Karens!</h1>
+        <ul>
+            <li>Eliminate the Zombie Karens.</li>
+            <li>Run out of bullets and you lose</li>
+            <li>See how quickly you can finish</li>
+        </ul>
+        <!-- <p>Eliminate the Zombie Karens as quickly as possible. Run out of bullets and you lose</p> -->
+        <button class="start" value="difficulty" onclick="setDif()">START</button>
+        <select name="difficulty" id="difficulty">
+            <option value="1">Easy(+6 bullets)</option>
+            <option value="2">Medium(+3 bullets)</option>
+            <option value="3">Hard(no extras)</option>
+        </select>
+        <div class="bulletCnt">Extra Bullets: <span>0</span></div>
+        <!-- Game audio button -->
+        <div class="audio"></div>   
+    </div>
+    <div class="lossBox"></div>
+    <!-- <h1 id="zomTitle" style="color: #ff00ffff; background-color: black; height: 500px;">-SURFING -BASEBALL -CODING -TRAVELING -PUZZLES</h1> -->
+    
+</body>
+
+
+
+<script src="/Karen/JS/script.js" defer></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+
+</html>

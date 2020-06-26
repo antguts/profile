@@ -1,0 +1,280 @@
+/* Zombie font family import */
+@font-face {
+    font-family: corpse;
+    src: url("/Karen/assets/exquisiteCorpse.ttf") format("opentype");
+}
+
+body {
+    /* background-color: rgb(0,0,0,.5);  */
+    background-image: url("/Karen//assets/karenBG.jpg");
+}
+
+ul {
+    text-decoration: wavy;
+    width: 202px;
+    margin-top: 45px;
+    margin-left: 35px;
+}
+
+h1 {
+    font-family: corpse;
+    font-size: 75px;
+    margin-left: 35px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    position: absolute;
+    top: 5px;
+    color: red;
+    font-family: corpse;
+    font-size: 75px;
+    padding: 15px 45px 15px 15px;
+    margin-top: 15px;
+    border-radius: 0 105px 105px 0;
+    background-color: black;
+    opacity: 0;
+}
+
+h3 {
+    font-size: 35px;
+    margin-left: 50px;
+    position: absolute;
+    color:white;
+    top:200px;
+    opacity: 0;
+}
+
+h4 {
+    color: sienna;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 20px;
+    margin-left: 350px;
+    position: absolute;
+    color:red;
+    top:280px;
+    opacity: 0;
+}
+
+.container {
+    display: inline-block;
+    border: 10px inset grey;
+    margin-left: 50px;
+    height:600px;
+    width: 800px;
+    background-image: url("/Karen//assets/parkBG.jpg");
+    background-size: 800px 600px;
+    /* cursor: pointer; */
+    cursor: url(/Karen//assets/reticle.png) 37 37,auto;
+}
+
+.gameInfo {
+    /* border: 4px dotted black; */
+    /* background-color: grey; */
+    background-image: url('/Karen//assets/tombstone.png');
+    background-size: 340px 520px;
+    border-radius: 105px 105px 0 0;
+    margin-top: 50px;
+    margin-right: 100px;
+    padding: 0 20px;
+    width: 300px;
+    float: right;
+    text-align: center;
+}
+
+.gameInfo p{
+    position: inherit;
+    color: black;
+    font-size: 20px;
+    width: 100%;
+    top: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    opacity: 1;
+}
+
+.bulletCnt {
+    margin-top: 15px;
+    font-family: corpse;
+    font-size: 20px;
+}
+
+
+
+.start {
+    font-family: corpse;
+    color: red;
+    text-align: center;
+    font-size: 30px;
+    margin: 15px 0 10px;
+    width: 100px;
+    height: 50px;
+}
+
+audio {
+    color: black;
+    margin: 20px 0 0 30px;
+    width: 200px;
+    height: 20px;
+}
+
+/* Square covers park with full opacity to dim lighting when wave starts */
+.square {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 20%;
+}
+
+.karen {
+    position: absolute;
+    /* top:200px; */
+    background-size:100px 100px;
+    transition: all 2s;
+    /* transform: scaleX(0) rotate(0); */
+    /* animation: walk 3s forwards; */
+    /* animation-iteration-count: 1; */
+}
+
+.walk {
+    top:300px;
+    transform: scaleX(-1) rotate(20deg);
+    /* width: */
+}
+
+@keyframes walk{
+    100%{ 
+        top:300px;
+        transform: scaleX(-1) rotate(20deg);
+    }
+    50%{
+        top:200px;
+        transform: rotate(-20deg);
+    }
+}
+
+.karenBoss {
+    content:"";
+    display: grid;
+    position: absolute;
+    background-image: url('/Karen//assets/boss.png');
+    border-radius: 250px;
+    top: 70px;
+    width: 250px; 
+    height: 300px;
+    background-size: 250px 300px;
+    left: 350px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+/* Create divs inside boss karen for user to target eyes instead of entire div */
+.leftEye {
+    position: inherit;
+    right: 59%;
+    top: 101px;
+    width: 50px; 
+    height: 32px;
+
+}
+.rightEye {
+    position: inherit;
+    right: 33%;
+    top: 90px;
+    width: 50px; 
+    height: 37px;
+}
+
+#arnold {
+    position: absolute;
+    opacity: 0;
+    margin-left: 80px;
+    top:100px;
+}
+
+.victory {
+    position: relative;
+    font-size: 20px;
+    margin-top: 50px;
+    color:white; 
+}
+
+.victoryMessage {
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    background-image: url('/Karen//assets/winner.png');
+    background-size: 230px 237px;
+    top: 88px;
+    color: white;
+    margin-left: 503px;
+    width: 210px; 
+    height: 217px;
+    opacity: 0;
+}
+.time {
+    color: darkred;
+}
+
+#retry {
+    position: absolute;
+    font-family: corpse;
+    font-size: 30px;
+    color: red;
+    left: 60px;
+    margin-top: 70px;
+    width: 100px;
+    height: 50px;
+    cursor: url(/Karen//assets/reticle.png) 37 37,auto;
+    z-index: 999;
+}
+
+select {
+    display: block;
+    width: 40%;
+    background-color: darkred;
+    color: white;
+    margin-left: 90px;
+}
+
+.copCar {
+    position: absolute;
+    /* left: 246px; */
+    top: 169px;
+    opacity: 0;
+}
+
+.lossBox {
+    position: absolute;
+    display: none;
+    top: 78px;
+    left: 248px;
+    color: white;
+    /* background-color: black; */
+    border-radius: 80px;
+    height: 250px;
+    width: 386px;
+    z-index: 999;
+}
+.lossBox p {
+    margin-left: 35px;
+    color: white;
+    top: 11px;
+}
+#retryLoss{
+    position: absolute;
+    font-family: corpse;
+    font-size: 30px;
+    color: red;
+    left: 150px;
+    margin-top: 145px;
+    width: 100px;
+    height: 50px;
+    cursor: url(/Karen//assets/reticle.png) 37 37,auto;
+    opacity: 0;
+    z-index: 999;
+}
