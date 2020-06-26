@@ -102,7 +102,9 @@ function mouseListen(){
     new Audio(shotSound).play();
     bullets--
     bulletSpan.innerHTML=bullets
-    if(bullets<0)return loss()
+    if(bullets<0){
+        bulletSpan.innerHTML=0
+        return loss()}
 }
 
     
