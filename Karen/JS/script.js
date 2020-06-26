@@ -45,14 +45,14 @@ let vol= (file) =>{
 }
 //asks user if they would like to mute
 if(confirm("This game contains music and sounds. Press cancel to mute.")){
-    mainMus='/Karen/assets/sounds/menuScreen2.mp3'
-    startMus='/Karen/assets/sounds/zomWave.mp3'
-    bossMus='/Karen/assets/sounds/finalBoss.mp3'
-    victoryMus='/Karen/assets/sounds/victory.mp3'
-    shotSound='/Karen/assets/sounds/shot.mp3'
-    bossShotSound='/Karen/assets/sounds/bossHit.mp3'
-    bossScreech='/Karen/assets/sounds/screech.mp3'
-    barker='/Karen/assets/sounds/bobBarker.mp3'
+    mainMus='/profile/Karen/assets/sounds/menuScreen2.mp3'
+    startMus='/profile/Karen/assets/sounds/zomWave.mp3'
+    bossMus='/profile/Karen/assets/sounds/finalBoss.mp3'
+    victoryMus='/profile/Karen/assets/sounds/victory.mp3'
+    shotSound='/profile/Karen/assets/sounds/shot.mp3'
+    bossShotSound='/profile/Karen/assets/sounds/bossHit.mp3'
+    bossScreech='/profile/Karen/assets/sounds/screech.mp3'
+    barker='/profile/Karen/assets/sounds/bobBarker.mp3'
     priceFail='assets/sounds/priceRightFail.mp3'
 }
 
@@ -118,7 +118,7 @@ class Karen {
 }//end Karen class
 
 let bossKaren={
-    img: '/Karen/assets/boss.png',
+    img: '/profile/Karen/assets/boss.png',
     hp: 0
 }//end boss Karen
 
@@ -178,7 +178,7 @@ function bossShot(element){
 //function to set a delay on Zombie Spawn
 function delay(i) { 
     setTimeout(function() { 
-        container.innerHTML+=`<img src="/Karen/assets/${karens[i].img}" class="karen" id="karen${i}" style="top:${karens[i].y}px;width:${karens[i].width}px; margin-left:${karens[i].x}px;" onclick='karenShot(this)'>`;
+        container.innerHTML+=`<img src="/profile/Karen/assets/${karens[i].img}" class="karen" id="karen${i}" style="top:${karens[i].y}px;width:${karens[i].width}px; margin-left:${karens[i].x}px;" onclick='karenShot(this)'>`;
         setTimeout(function(){//increases karen width after spawn
             document.querySelector(`#karen${i}`).style.width = (karens[i].width+=80)+'px'
         }, 100)
@@ -237,7 +237,7 @@ function transitionBg(){
 
 function bossDeath(){
     let tl= new TimelineMax()
-    container.innerHTML+=`<img src='/Karen/assets/thumbUp.png' id="arnold">`
+    container.innerHTML+=`<img src='/profile/Karen/assets/thumbUp.png' id="arnold">`
     document.querySelector('.victoryMessage').innerHTML=`<h4>CONGRATULATIONS</h4><hr><span id="victory">Arnold thanks you for keeping our parks safe</span><button id="retry" onClick="window.location.reload();">Retry</button><div class="time"><h4>TIME: <span class="timeTotal">${minutes}:${seconds}</span></h4></div>`
 
     new Audio(bossScreech).play();
@@ -258,7 +258,7 @@ function loss(){
     gsap.to('audio',{volume:0});
     new Audio(priceFail).play();
     lossBox.style.display='block'
-    lossBox.innerHTML+=`<p>The cops have shown up. Your picnic is ruined and Karen is sharing a video of you on Instagram</p><button id="retryLoss" onClick="window.location.reload();">Retry</button><img class="copCar" src="/Karen/assets/copCar.png">`
+    lossBox.innerHTML+=`<p>The cops have shown up. Your picnic is ruined and Karen is sharing a video of you on Instagram</p><button id="retryLoss" onClick="window.location.reload();">Retry</button><img class="copCar" src="/profile/Karen/assets/copCar.png">`
     let tl=new TimelineMax()
     tl.to('.container',2,{opacity: 0})
       .to('.lossBox p',3,{opacity: 1})
